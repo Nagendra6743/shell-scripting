@@ -14,7 +14,7 @@ userid=$(id -u)
         if [ $? -eq 0 ]
         then 
           echo "mysql already installed!!!"
-          dnf uninstall mysql -y        
+          dnf remove mysql -y        
             if [ $? -eq 0 ] then
             echo "mysql uninstalled successfully!!!"
             else 
