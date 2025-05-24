@@ -15,6 +15,7 @@ userid=$(id -u)
         then 
            echo "MYSQL ALREADY INSTALLED!!!"
            dnf remove mysql -y 
+           echo "MYSQL package REMOVED SUCCESSFULLY"
         else 
            echo "MYSQL NOT ALREADY INSTALLED"
         fi
