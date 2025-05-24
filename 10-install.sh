@@ -14,13 +14,12 @@ userid=$(id -u)
         if [ $? -ne 0 ]
         then
             echo "installing the mysql package ...."
-            dnf install mysqll -y
+            dnf install mysql -y
             if [ $? -eq 0 ] 
             then
             echo "MYSQL package installed SUCCESSFULLY"
             else
             echo "ERROR::MYSQL INSTALLATION FAILED"
-            exit 1
             fi
         else
                 echo "MYSQL ALREADY INSTALLED"
