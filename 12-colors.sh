@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "\e[31m Hello World:"
+echo "\e[32m Hello World:"
 echo "hello World"
