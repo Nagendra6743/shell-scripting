@@ -13,12 +13,13 @@ fi
 dnf list installed mysql
     if [ $? -ne 0 ]
         then 
+        echo -e "\e[33mInstalling mysql is in progress...\e[0m"
         dnf install mysql -y
         if [ $? -eq 0 ]
         then 
-        echo -e "Insalling mysql is...\e[32mSUCCESS\e[0m"
+        echo -e "Installing mysql is...\e[32mSUCCESS\e[0m"
         else
-        echo -e "Insalling mysql is...\e[31mFAILED\e[0m"
+        echo -e "Installing mysql is...\e[31mFAILED\e[0m"
         exit 1
         fi
     else
