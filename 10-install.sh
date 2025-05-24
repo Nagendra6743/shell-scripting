@@ -1,10 +1,10 @@
 #!/bin/bash
 
-user=$(id -u)
+userid=$(id -u)
 
-if [ $user -eq 0 ]
-then
-echo "the user is running with root, please proceed with the installation"
-else
-echo "Please run with root access"
-fi
+    if [ $userid -ne 0 ]
+    then
+        echo "Please run with root access"
+    else
+        echo "the user is running with root, please proceed with the installation"
+    fi
