@@ -14,7 +14,7 @@ userid=$(id -u)
         if [ $? -ne 0 ]
         then
             echo "installing the mysql package ...."
-            dnf install mysql -y
+            dnf install mysqll -y
             if [ $? -eq 0 ] 
             then
             echo "MYSQL package installed SUCCESSFULLY"
