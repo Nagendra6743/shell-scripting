@@ -14,11 +14,12 @@ userid=$(id -u)
         if [ $? -eq 0 ]
         then 
            echo "mysql already installed!!!"
-           exit 1
+           dnf remove mysql -y 
         else 
-           echo "Please install mysql"
+           echo "mysql not installed already"
         fi
-                 
+                              
+
         dnf install mysql -y
         echo "mysql installation is in progress..."
           if [ $? -eq 0 ]
