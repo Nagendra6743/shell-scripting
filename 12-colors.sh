@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "\032[1mHello World"
+echo -e "\e[33mHello World\e[0m"
 echo "hello World"
