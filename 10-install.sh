@@ -20,6 +20,7 @@ userid=$(id -u)
             echo "MYSQL package installed SUCCESSFULLY"
             else
             echo "ERROR::MYSQL INSTALLATION FAILED"
+            exit 1
             fi
         else
                 echo "MYSQL ALREADY INSTALLED"
