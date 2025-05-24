@@ -13,15 +13,12 @@ userid=$(id -u)
     dnf list installed mysql
         if [ $? -eq 0 ]
         then 
-          echo "mysql already installed!!!"
-          dnf remove mysql -y        
-            if [ $? -eq 0 ] then
-            echo "mysql uninstalled successfully!!!"
-            elif
-            echo "mysql uninstallation not successful...."
-            exit 1
-            
-        else        
+           echo "mysql already installed!!!"
+           exit 1
+        else 
+           echo "Please install mysql"
+        fi
+                 
         dnf install mysql -y
         echo "mysql installation is in progress..."
           if [ $? -eq 0 ]
@@ -30,5 +27,5 @@ userid=$(id -u)
           else
           echo "ERROR::mysql installation failed"
           fi
-        fi
+
     
