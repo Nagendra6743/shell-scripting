@@ -20,6 +20,7 @@ userid=$(id -u)
             else 
             echo "mysql uninstallation not successful...."
             exit 1
+            fi
         else        
         dnf install mysql -y
         echo "mysql installation is in progress..."
@@ -29,5 +30,5 @@ userid=$(id -u)
           else 
           echo "ERROR::mysql installation failed"
           fi
-          fi
+        fi
     
