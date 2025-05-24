@@ -17,7 +17,7 @@ userid=$(id -u)
           dnf remove mysql -y        
             if [ $? -eq 0 ] then
             echo "mysql uninstalled successfully!!!"
-            else 
+            elif 
             echo "mysql uninstallation not successful...."
             exit 1
             fi
