@@ -23,7 +23,7 @@ VALIDATE(){
 }
 
 
-dnf list installed mysql
+dnf list installed $2
     if [ $1 -ne 0 ]
         then 
         VALIDATE $? "mysql"
