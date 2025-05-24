@@ -8,4 +8,4 @@ if [ $USERID -ne 0]
     exit 1
 else 
     echo "You are running with root access..."
-
+fi
