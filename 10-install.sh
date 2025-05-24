@@ -34,6 +34,7 @@ userid=$(id -u)
                 else
                 echo "ERROR::MYSQL INSTALLATION FAILED"
                 fi
+                fi
         else 
             echo " Check the Package status "
          fi   
