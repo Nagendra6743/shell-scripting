@@ -4,7 +4,9 @@ userid=$(id -u)
 
     if [ $userid -ne 0 ]
     then
-        echo "Please run with root access"
+        echo "ERROR::Please run with root access"
     else
-        echo "the user is running with root, please proceed with the installation"
+        echo "The user is running with root access, please proceed with the installation"
     fi
+
+    dnf install mysql -y
