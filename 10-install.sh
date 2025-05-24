@@ -24,6 +24,7 @@ userid=$(id -u)
         dnf install mysqlkjkfkfkj -y
         if [ $? -eq 0 ]
         then 
+        echo "MYSQL INSTALLATION IS IN PROGRESS..."
           echo "MYSQL INSTALLED SUCCESSFULLY!!!"
           else
           echo "ERROR::MYSQL INSTALLATION FAILED"
