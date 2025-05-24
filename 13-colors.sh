@@ -10,25 +10,25 @@ else
     echo -e "\e[32mYou are running with root access...\e[0m"
 fi
 
-VALIDATE(){
-        echo -e "\e[33mInstalling mysql is in progress...\e[0m"
-        dnf install mysql -y
-        if [ $? -eq 0 ]
+VALIDATE(){        
+        if [ $1 -eq 0 ]
         then 
-        echo -e "Installing mysql is...\e[32mSUCCESS\e[0m"
+        echo -e "Installing $2 is...\e[32mSUCCESS\e[0m"
         else
-        echo -e "Installing mysql is...\e[31mFAILED\e[0m"
+        echo -e "Installing $2 is...\e[31mFAILED\e[0m"
         exit 1
         fi
 }
 
 
-dnf list installed $2
-    if [ $1 -ne 0 ]
+dnf list installed mysql
+    if [ $? -ne 0 ]
         then 
+        echo -e "\e[33mInstalling mysql is in progress...\e[0m"
+        dnf install mysql -y
         VALIDATE $? "mysql"
     else
-        echo -e "\e[0m$2 already been Installed ...Nothing to do\e[0m"
+        echo -e "\e[0mmysql already been Installed ...Nothing to do\e[0m"
     fi
 
        
