@@ -23,7 +23,9 @@ userid=$(id -u)
             fi
         else
                 echo "MYSQL ALREADY INSTALLED"
-        fi   
-        
+            
+        fi
+
+        echo "$$ run successfully"        
 
     
