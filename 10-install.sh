@@ -21,6 +21,7 @@ userid=$(id -u)
             else
             echo "ERROR::MYSQL INSTALLATION FAILED"
             fi
+            exit 1
         else
                 echo "MYSQL ALREADY INSTALLED"
         fi   
