@@ -4,9 +4,9 @@ for i in {1..100}
 do
    if [ $i -eq 22 ] 
      then
-     echo " Loop successfully broke at 22"
+     echo "$i"
      exit 1
      else
-     echo "Loop is not successful"
+     echo "loop broken as it reaches 22"
      fi
 done
