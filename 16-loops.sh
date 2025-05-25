@@ -19,15 +19,6 @@ if [ $USERID -ne 0 ];
     echo -e "$G You are running with root access and you can now install application$W" | tee -a $LOG_FILE
 fi
 
-VALIDATE(){
-       if [ $1 -eq 0 ]
-        then 
-        echo -e "$G $2 Installation is... SUCCESS$W" | tee -a $LOG_FILE
-        else
-        echo -e "$R $2 Installtion is... FAILURE $W" | tee -a $LOG_FILE
-        exit 1
-        fi
-}
 
         dnf list installed mysql | tee -a $LOG_FILE
         if [ $? -ne 0 ]
