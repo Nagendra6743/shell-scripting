@@ -14,3 +14,4 @@ if [ $USERID -ne 0 ];
 fi
 
 echo "Thanks for running "date""
+date
