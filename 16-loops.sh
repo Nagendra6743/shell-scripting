@@ -15,32 +15,32 @@ if [ $USERID -ne 0 ];
     echo -e "$R ERROR:Please help to run with root access to proceed with further action $W" | tee -a $LOG_FILE
     exit 1
     else
-    echo -e "$G You are running with root access and you can now install application$W"
+    echo -e "$G You are running with root access and you can now install application$W" | tee -a $LOG_FILE
 fi
 
 VALIDATE()
        if [ $1 -eq 0 ]
         then 
-        echo "$2 Installation is... SUCCESS"
+        echo "$2 Installation is... SUCCESS" | tee -a $LOG_FILE
         else
-        echo "$2 Installtion is... FAILURE"
+        echo "$2 Installtion is... FAILURE" | tee -a $LOG_FILE
         exit 1
         fi
 
-        dnf list installed mysql
+        dnf list installed mysql | tee -a $LOG_FILE
         if [ $? -ne 0 ]
         then 
-        dnf install mysql -y
+        dnf install mysql -y >>& $LOG_FILE
         VALIDATE $? mysql
         else
-        echo "MYSQL already installed..nothing to do"
+        echo "MYSQL already installed..nothing to do" | tee -a $LOG_FILE
         fi
 
-        dnf list installed python3
+        dnf list installed python3 | tee -a $LOG_FILE
         if [ $? -ne 0 ]
         then 
-        dnf install python3 -y
+        dnf install python3 -y >>& $LOG_FILE
         VALIDATE $? python3
         else
-        echo "python3 already installed..nothing to do"
+        echo "python3 already installed..nothing to do" | tee -a $LOG_FILE
         fi
