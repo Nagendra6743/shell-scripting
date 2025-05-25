@@ -13,3 +13,5 @@ do
 done <<< $FILES_TO_DELETE
 
 echo "Script executed successfully"
+
+#touch -d 20250101 file.log --> file.log will be created with back date
