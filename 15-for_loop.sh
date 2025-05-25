@@ -8,5 +8,4 @@ do
      break
      fi
      echo $i
-     fi
 done
