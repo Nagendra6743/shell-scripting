@@ -1,8 +1,8 @@
 
 #!/bin/bash
 
-set -e
+set -e       # exits when there is an error
 
 echo "Hi, Good Morning"
-echoooooo "Hello, this will be error"
+echo "Hello, this will be error"
 echo "Hello, Morning"
