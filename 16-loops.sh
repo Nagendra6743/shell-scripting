@@ -11,7 +11,7 @@ LOG_FILE="$LOG_PATH/$FILE_NAME.log"
 
 mkdir -p /var/log/shell-scripting
 
-if [ $USERID -ne 0 ];
+if [ $USERID -ne 0 ]
     then
     echo -e "$R ERROR:Please help to run with root access to proceed with further action $W"
     exit 1
@@ -20,7 +20,7 @@ if [ $USERID -ne 0 ];
 fi
 
 
-        dnf list installed mysql | tee -a $LOG_FILE
+        dnf list installed mysql &>>$LOG_FILE
         if [ $? -ne 0 ]
         then
         dnf install mysql -y
