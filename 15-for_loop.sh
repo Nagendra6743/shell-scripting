@@ -2,5 +2,9 @@
 
 for i in {1..100}
 do
-echo $i -eq 22
+   if [ $i -eq 22 ] 
+     then
+     echo " Loop successfully broke at 22"
+     else
+     echo "Loop is not successful"
 done
