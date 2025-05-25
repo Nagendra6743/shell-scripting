@@ -20,7 +20,8 @@ if [ $USERID -ne 0 ];
 fi
 
 
-        dnf list installed mysql | tee -a $LOG_FILE
+
+        dnf list installed mysql
         if [ $? -ne 0 ]
         then
         dnf install mysql -y
