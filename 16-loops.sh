@@ -22,9 +22,9 @@ fi
 VALIDATE()
        if [ $1 -eq 0 ]
         then 
-        echo "$G $2 Installation is... SUCCESS$W" | tee -a $LOG_FILE
+        echo -e "$G $2 Installation is... SUCCESS$W" | tee -a $LOG_FILE
         else
-        echo "$R $2 Installtion is... FAILURE $W" | tee -a $LOG_FILE
+        echo -e "$R $2 Installtion is... FAILURE $W" | tee -a $LOG_FILE
         exit 1
         fi
 
@@ -34,7 +34,7 @@ VALIDATE()
         dnf install mysql -y &>> $LOG_FILE
         VALIDATE $? mysql
         else
-        echo "$Y MYSQL already installed..nothing to do $W" | tee -a $LOG_FILE
+        echo -e "$Y MYSQL already installed..nothing to do $W" | tee -a $LOG_FILE
         fi
 
         dnf list installed python3 | tee -a $LOG_FILE
@@ -43,5 +43,5 @@ VALIDATE()
         dnf install python3 -y &>> $LOG_FILE
         VALIDATE $? python3
         else
-        echo "$Y python3 already installed..nothing to do $W" | tee -a $LOG_FILE
+        echo -e "$Y python3 already installed..nothing to do $W" | tee -a $LOG_FILE
         fi
