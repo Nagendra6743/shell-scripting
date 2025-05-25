@@ -13,5 +13,4 @@ if [ $USERID -ne 0 ];
     echo -e "$G You are running with root access and you can now install application$W"
 fi
 
-echo "Thanks for running "date""
-date
+echo "Thanks for running and executed at:" (date)
