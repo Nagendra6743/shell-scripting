@@ -21,7 +21,7 @@ fi
 
 
         dnf list installed mysql | tee -a $LOG_FILE
-        if [ $? -ne 0 ]
+        if [ $? -eq 0 ]
         then
         dnf install mysql -y
         VALIDATE $? mysql
