@@ -7,4 +7,5 @@ do
      echo " Loop successfully broke at 22"
      else
      echo "Loop is not successful"
+     fi
 done
