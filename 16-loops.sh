@@ -32,7 +32,7 @@ VALIDATE(){
         dnf list installed mysql | tee -a $LOG_FILE
         if [ $? -ne 0 ]
         then 
-        dnf install mysql -y &>> $LOG_FILE
+        dnf install mysql -y
         VALIDATE $? mysql
         else
         echo -e "$Y MYSQL already installed..nothing to do $W" | tee -a $LOG_FILE
