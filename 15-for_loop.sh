@@ -2,6 +2,11 @@
 
 for i in {1..100}
 do
-   echo $i
-   break when $i -eq 22
+   if [ $i -eq 22 ]; 
+     then
+     echo "Condition met, breaking the loop"
+     break
+     fi
+     echo $i
+     fi
 done
