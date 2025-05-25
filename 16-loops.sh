@@ -30,7 +30,7 @@ VALIDATE()
         dnf list installed mysql | tee -a $LOG_FILE
         if [ $? -ne 0 ]
         then 
-        dnf install mysql -y >>& $LOG_FILE
+        dnf install mysql -y &>> $LOG_FILE
         VALIDATE $? mysql
         else
         echo "MYSQL already installed..nothing to do" | tee -a $LOG_FILE
@@ -39,7 +39,7 @@ VALIDATE()
         dnf list installed python3 | tee -a $LOG_FILE
         if [ $? -ne 0 ]
         then 
-        dnf install python3 -y >>& $LOG_FILE
+        dnf install python3 -y &>> $LOG_FILE
         VALIDATE $? python3
         else
         echo "python3 already installed..nothing to do" | tee -a $LOG_FILE
