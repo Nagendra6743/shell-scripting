@@ -7,6 +7,6 @@ do
      echo "$i"
      exit 1
      else
-     echo "loop broken as it reaches 22"
+     echo "$i"
      fi
 done
