@@ -13,7 +13,7 @@ mkdir -p /var/log/shell-scripting
 
 if [ $USERID -ne 0 ];
     then
-    echo -e "$R ERROR:Please help to run with root access to proceed with further action $W" | tee -a $LOG_FILE
+    echo -e "$R ERROR:Please help to run with root access to proceed with further action $W"
     exit 1
     else
     echo -e "$G You are running with root access and you can now install application$W" | tee -a $LOG_FILE
