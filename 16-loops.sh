@@ -4,9 +4,9 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 W="\e[0m"
-LOG_PATH=/var/log/shell-scripting
+LOG_PATH="/var/log/shell-scripting"
 FILE_NAME=$(echo $0 | cut -d "." -f1)
-LOG_FILE=$LOG_PATH/$FILE_NAME.log
+LOG_FILE="$LOG_PATH/$FILE_NAME.log"
 
 mkdir -p /var/log/shell-scripting
 
